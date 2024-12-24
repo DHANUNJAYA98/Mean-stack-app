@@ -1,0 +1,93 @@
+.d1 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.h1 {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    justify-content: space-between;
+}
+
+.pic {
+    width: 50px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.a1 {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding-left: 20px;
+}
+
+.b1 {
+    background-color: yellow;
+    padding: 10px;
+    display: flex;
+    border-radius: 5px;
+    margin-left: auto;
+}
+
+.h2 {
+    font-size: larger;
+    padding-top: 3px;
+    align-items: center;
+    text-align: center;
+}
+
+.ingredients-container, .chefs-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.i1, .i2 .i3 {
+    width: 100%;
+    height: auto;
+}
+
+.ingredients-text, .chefs-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.bo, .co {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.del {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.b1 {
+    font-size: 1rem; /* Keep the button text size */
+    padding: 10px 20px; /* Ensure consistent padding */
+    display: inline-flex; /* Align the icon and text inline */
+    align-items: center; /* Vertically align the icon and text */
+  }
+  
+  .b1 i {
+    font-size: 1.2rem; /* Adjust cart icon size */
+    margin-right: 5px; /* Space between icon and text */
+  }

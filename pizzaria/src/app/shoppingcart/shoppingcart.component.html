@@ -1,0 +1,40 @@
+<div class="shopping-cart-container">
+    <h2>My Cart</h2>
+  
+    <div *ngIf="cartItems.length === 0">
+      Your cart is empty.
+    </div>
+  
+    <ng-container *ngFor="let item of cartItems">
+      <div *ngIf="item.quantity > 0" class="cart-item">
+        <div class="cart-item-details">
+          <img [src]="item.pizzaId.image" alt="{{ item.pizzaId.name }}" class="cart-item-image">
+          <div class="cart-item-info">
+            <p class="pizza-name">{{ item.pizzaId.name }}</p>
+            <div class="quantity-container">
+              <label for="quantity">Quantity:</label>
+              <input type="number" [(ngModel)]="item.quantity" (ngModelChange)="updateQuantity(item)" class="quantity-input" min="1">
+            </div>
+            <p class="item-price">₹{{ item.pizzaId.price * item.quantity }}</p>
+          </div>
+        </div>
+        <button (click)="removeFromCart(item)" class="remove-from-cart-btn">Remove</button>
+      </div>
+    </ng-container>
+  
+    <div *ngIf="cartItems.length > 0 && !showCheckout">
+      <h3>Total: ₹{{ totalAmount }} ({{ getTotalItemsInCart() }} items)</h3>
+      <button class="checkout-btn" (click)="proceedToCheckout()">Proceed to Checkout</button>
+    </div>
+  
+    <div *ngIf="showCheckout" class="show-checkout-container">
+      <h3>Payment Details</h3>
+      <p>Total Amount: ₹{{ totalAmount }}</p>
+      <button class="confirm-order-btn" (click)="confirmOrder()">Confirm Order</button>
+    </div>
+  
+    <div *ngIf="orderConfirmed" class="order-confirmation">
+      Your order will be delivered in 45 minutes!
+    </div>
+  </div>
+  

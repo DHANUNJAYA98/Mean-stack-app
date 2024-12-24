@@ -1,0 +1,17 @@
+<div class="d1">
+    <!-- Header / Navigation -->
+    <h1 class="h1">
+      <img src="/assets/PizzeriaLogo 1.png" routerLink="/homescreen" routerLinkActive="active" class="pic" alt="Pizzeria Logo">
+      <a routerLink="/orderpizza" routerLinkActive="active" class="a1">Order Pizza</a> &nbsp;&nbsp;
+      <a routerLink="/pizza_builder" routerLinkActive="active" class="a1">Build Ur Pizza</a>
+  
+      <!-- Shopping Cart Button with Icon -->
+      <button class="b1" [routerLink]="['/cart']">
+        <i class="bi bi-cart" style="font-size: 1.2rem; margin-right: 5px;"></i> Shopping Cart
+      </button>
+      <!-- Click to load cart -->
+    </h1>
+  
+    <router-outlet></router-outlet>
+  </div>
+  

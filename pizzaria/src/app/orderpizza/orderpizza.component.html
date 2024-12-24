@@ -1,0 +1,27 @@
+<div class="pizza-menu-container">
+  <h1>Order Your Favorite Pizza</h1>
+  <div class="pizza-row" *ngFor="let pizzaPair of pizzas | sliceByTwo">
+    <div class="pizza-card" *ngFor="let pizza of pizzaPair">
+      <div class="pizza-left">
+        <h2 class="pizza-name">{{ pizza.name }}</h2>
+        <p class="pizza-description">{{ pizza.description }}</p>
+        <p><strong>Ingredients:</strong> {{ pizza.ingredients.join(', ') }}</p>
+        <p><strong>Toppings:</strong> {{ pizza.topping.join(', ') }}</p>
+        <p class="pizza-price">₹{{ pizza.price }}</p>
+      </div>
+      <div class="pizza-right">
+        <img [src]="pizza.image" [alt]="pizza.name" class="pizza-image" />
+        
+        <!-- Quantity Controls -->
+        <div class="quantity-controls">
+          <button (click)="decrementQuantity(pizza)" [disabled]="pizza.quantity <= 1">-</button>
+          <input type="number" [value]="pizza.quantity" readonly />
+          <button (click)="incrementQuantity(pizza)">+</button>
+        </div>
+        
+        <!-- Add to Cart Button -->
+        <button (click)="addToCart(pizza)" class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>

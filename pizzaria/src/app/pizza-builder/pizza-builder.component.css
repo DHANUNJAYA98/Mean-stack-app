@@ -1,0 +1,19 @@
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  td {
+    padding: 10px;
+    text-align: center;
+  }
+  button {
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #ec971f;
+  }
+  

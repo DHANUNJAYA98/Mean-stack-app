@@ -1,0 +1,137 @@
+.pizza-menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pizza-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.pizza-card {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 48%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.pizza-left {
+  padding: 15px;
+  flex: 2;
+}
+
+.pizza-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.pizza-description {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.pizza-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.pizza-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9f9f9;
+  flex: 1;
+}
+
+.pizza-image {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.add-to-cart-btn {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e69500;
+}
+
+.quantity-container {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.quantity-input {
+  width: 60px;
+  padding: 5px;
+  font-size: 1rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.added-to-cart-message {
+  color: green;
+  font-size: 1rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  gap: 5px; /* Ensure a small gap between the buttons and the input box */
+}
+
+.quantity-controls button {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+}
+
+.quantity-controls input {
+  width: 40px; /* Small box width */
+  height: 30px; /* Consistent height */
+  text-align: center; /* Center text horizontally */
+  font-size: 16px; /* Font size for readability */
+  margin: 0; /* Remove extra margins */
+  border: 1px solid #ddd; /* Border for visibility */
+  border-radius: 5px; /* Rounded corners */
+  box-sizing: border-box; /* Ensure consistent sizing */
+  padding: 0; /* Remove padding to avoid shifting text */
+  display: flex; /* Flexbox for precise alignment */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+}
+
